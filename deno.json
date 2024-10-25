@@ -1,0 +1,25 @@
+{
+  "imports": {
+    "@std/assert": "jsr:@std/assert@1",
+    "@std/dotenv": "jsr:@std/dotenv@^0.225.2",
+    "@std/expect": "jsr:@std/expect@^1.0.5",
+    "@std/testing": "jsr:@std/testing@^1.0.3",
+    "@types/mongoose": "npm:@types/mongoose@^5.11.97",
+    "hono": "jsr:@hono/hono@^4.6.6",
+    "mongoose": "npm:mongoose@^8.7.2",
+    "bcrypt": "https://deno.land/x/bcrypt@v0.4.1/mod.ts",
+    "joi": "npm:joi@^17.13.3",
+    "@types/joi": "npm:@types/joi@^17.2.3",
+    "supertest": "npm:supertest@^7.0.0"
+  },
+  "tasks": {
+    "start": "deno run --allow-read --allow-env --allow-sys --allow-net main.ts",
+    "dev": "deno run --watch --allow-read --allow-env --allow-sys --allow-net main.ts",
+    "test": "deno test --allow-env --allow-read --allow-net --allow-sys",
+    "cache": "deno cache main.ts"
+  },
+  "compilerOptions": {
+    "jsx": "precompile",
+    "jsxImportSource": "hono/jsx"
+  }
+}
